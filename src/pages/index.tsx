@@ -8,10 +8,11 @@ import { useTheme } from 'styled-components';
 import { Divider, Grid } from '@mui/material';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 import Comment from '../components/comment';
-import { cards, comments, partners } from '../utils/constants';
+import { cards, comments, fields, partners } from '../utils/constants';
 import Card from '../components/card';
 import Carousel from 'react-material-ui-carousel';
 import Partner from '../components/partner/partner';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 export default function App() {
   const theme = useTheme()
@@ -116,7 +117,7 @@ export default function App() {
             {"We partner with the world’s best"}
           </Typography>
 
-          <Carousel indicators={false}>
+          <Carousel>
             {partners.map((partner, i) => (
               <Partner key={i} partner={partner} /> 
             ))}
@@ -144,6 +145,49 @@ export default function App() {
               ))
             }
           </Grid>
+        </Box>
+
+        <Box sx={{display: {xs: 'block', md: 'flex'},mt: 20}}>
+          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
+            <Box
+              component="img"
+              sx={{
+                maxWidth: 500,
+                width: '100%',
+                height: 'fit-content',
+                objectFit: 'contain'
+              }}
+              alt="The house from the offer."
+              src="/images/dashboard1.png"
+            />
+          </Box>
+
+          <Box flex={1} sx={{pl: {xs: 0, md: 5}, pt: {xs: 5, md: 0}}}>
+            <Typography variant="h5" component="h3" gutterBottom color={theme.palette.primary.main} fontWeight="bold">
+              {"We deeply care about every startup we work with, providing personalized support for their success"}
+            </Typography>
+
+            <Box>
+              {
+                fields.map((item, index) => (
+                  <Box key={index} sx={{display: 'flex', alignItems: 'center', color: theme.palette.primary.main}}>
+                    <CheckCircleRoundedIcon  />
+                    <Typography variant="body2" component="h3" gutterBottom mt={1} ml={1} color='text.primary' fontWeight='bold'>
+                      {item}
+                    </Typography>
+                  </Box>
+                ))
+              }
+            </Box>
+            <Button
+              variant="contained"
+              onClick={() => {console.log('jjj')}}
+              sx={{  display: 'block', my: 2, height: 'fit-content', borderRadius: 10, fontSize: '0.75rem' }}
+            >
+              Schedule Demo
+            </Button>
+           
+          </Box>
         </Box>
       </Container>
     </Layout>

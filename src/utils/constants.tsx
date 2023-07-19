@@ -73,3 +73,10 @@ export const cards = [
 export const partners = [
   'quickbooks.png', 'stripe.png', 'bill.png', 'shopify.png', 'gusto.png', 'plaid.png', 'square.png'
 ];
+
+export const fields = [
+  'Trusted by many founders',
+  'Dedicated one-on-one support',
+  'Peace of mind',
+  'Clean, organized books'
+]

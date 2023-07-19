@@ -6,14 +6,14 @@ type Props = {
   partner: string;
 }
 
-export default function Partner({partner}: Props) {
+export default function Partner({ partner }: Props) {
   return (
     <Box sx={{background: '#ccc', borderRadius: 5, p: 3, py: 4}}>
       <Box
         component="img"
         sx={{
           width: 'auto',
-          height: 23,
+          height: 103,
           objectFit: 'contain'
         }}
         alt="The house from the offer."
