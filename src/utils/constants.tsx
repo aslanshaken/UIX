@@ -80,3 +80,69 @@ export const fields = [
   'Peace of mind',
   'Clean, organized books'
 ]
+
+export const businesses = [
+  {
+    title: 'Free Analyze',
+    desc: 'Unlock business insights with our free analysis, tailored financial solutions',
+    price: '$0',
+    rate: '',
+    items: ['Expert team review of your finances', 'Identification of how our services can benefit you', 'Understanding of your specific needs', 'Customized assistance based on your requirements']
+  },
+  {
+    title: 'Bookkeeping',
+    desc: 'Take control of your finances with our personalized support and simplified explanations',
+    price: null,
+    rate: '',
+    items: ['Dedicated finance expert', 'Daily Bookkeeping', 'Financial statements and transaction management', 'Monthly book closure for control and clarity']
+  },
+  {
+    title: 'CFO',
+    desc: `Fuel your business's financial strategy with our CFO expertise, guiding you towards sustainable growth and profitability`,
+    price: '$2,000',
+    rate: '/month',
+    items: ['Clear explanations and analysis of financial reports', 'Strategic planning and execution', 'Budgeting and forecasting support', 'Risk management and cash flow supervision']
+  }
+]
+
+export const achieved = [
+  {
+    name: 'spotify',
+    logo: 'spotfiy.png',
+    url: "https://open.spotify.com/"
+  },
+  {
+    name: 'forbe',
+    logo: 'forbe.png',
+    url: "https://www.forbes.com/"
+  },
+  {
+    name: 'inc',
+    logo: 'inc.png',
+    url: "https://www.inc.com/"
+  },
+  {
+    name: 'apple',
+    logo: 'apple.png',
+    url: "https://www.apple.com/apple-podcasts/"
+  },
+]
+
+export const FAQs = [
+  {
+    title: 'What is Webflow and why is it the best website builder?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+  },
+  {
+    title: 'When did Webflow was founded?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+  },
+  {
+    title: 'How do you clone a Webflow Template?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+  },
+  {
+    title: 'Why is BRIX Templates the best Webflow agency?',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+  },
+]
