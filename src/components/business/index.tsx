@@ -17,8 +17,9 @@ export default function Business({ title, desc, price, rate, items }: Props) {
 
   return (
     <Box sx={{
-      borderRadius: 1,
+      borderRadius: 5,
       background: 'linear-gradient(180deg, #FFF 25%, #CFD4D4 100%);',
+      border: .5,
       p: 3,
       '&:hover': {
         background: 'linear-gradient(180deg, #FFF 0%, #CADCFF 100%);'
@@ -32,13 +33,13 @@ export default function Business({ title, desc, price, rate, items }: Props) {
         {title}
       </Typography>
 
-      <Typography variant="body2" color="text.secondary" maxWidth='400px' fontWeight='medium' mt={0.5}>
+      <Typography variant="body1" color="text.secondary" maxWidth='400px' fontWeight='medium' mt={0.5}>
         {desc}
       </Typography>
 
       {
         price && 
-        <Typography variant="h6" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={6}>
+        <Typography variant="h5" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={6}>
           {price} 
         <Typography variant='caption'>{rate}</Typography>
         </Typography>
@@ -50,7 +51,7 @@ export default function Business({ title, desc, price, rate, items }: Props) {
           component="img"
           sx={{
             my: 2,
-            width: '100%',
+            width: '70%',
             height: 'fit-content',
             objectFit: 'contain'
           }}

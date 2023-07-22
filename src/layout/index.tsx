@@ -10,7 +10,7 @@ type Props = {
 export default function Layout({children}: Props) {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ my: 4 }}>
+      <Box sx={{ my: 1 }}>
         <Header />
         {children}
         <Footer />

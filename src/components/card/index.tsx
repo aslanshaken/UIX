@@ -18,7 +18,7 @@ export default function Card({ title, description }: Props) {
         {title}
       </Typography>
 
-      <Typography variant="body2" color="text.secondary" align="center" maxWidth='400px' mt={2}>
+      <Typography variant="body1" color="text.secondary" align="center" maxWidth='400px' mt={2}>
         {description}
       </Typography>
     </Box>

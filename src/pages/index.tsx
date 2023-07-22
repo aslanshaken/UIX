@@ -24,16 +24,20 @@ export default function App() {
     <Layout>
       <Container maxWidth="lg">
         <Box mt={10} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Typography variant="h3" component="h3" gutterBottom textAlign='center'>
-            Understand Your Business with Expert Bookkeeping and Strategic CFO Services
+          <Typography variant="h3" component="h6" gutterBottom textAlign='center'>
+            Understand Your Business with 
+            <br/>
+            Expert Bookkeeping and Strategic CFO Services
           </Typography>
 
-          <Typography variant="h6" color="text.secondary" align="center" maxWidth={500} margin='auto' my={2}>
-            {"One team for all your accounting needs. "}
+          <Typography variant="h5" color="GrayText" align="center" maxWidth={500} margin='auto' my={3}>
+            {"One team for all your accounting needs"}
+            <br/>
             <Box component="span" sx={{fontWeight: 'bold'}}>
-              Full cycle Bookkeeping, CFO, Tax Planner and Personalized Service
+              Full Cycle Bookkeeping, CFO and Tax Planner
             </Box>
-            {" for startups and growing businesses."}
+            <br/>
+            {" for startups and growing businesses"}
           </Typography>
 
           <Button
@@ -49,21 +53,25 @@ export default function App() {
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Built by founders, for founders"}
           </Typography>
-
-          <Typography variant="h5" component="h3" gutterBottom textAlign='center' fontWeight={'bold'}>
-            {"We are the fast growing accounting firm in the USA that focuses on start up"}
+          <br/>
+          <Typography variant="h5" component="h3" gutterBottom textAlign='center' fontWeight={'medium'}>
+            {"We are the fast growing accounting firm in the USA that focuses on startups"}
           </Typography>
 
           <Divider sx={{ my: 2.5 }} />
 
           <Box sx={{display: {xs: 'block', md: 'flex'}}}>
             <Box flex={1} sx={{pr: {xs: 0, md: 4}, pb: {xs: 4, md: 0}}}>
-              <Typography variant="h6" component="h3" gutterBottom textAlign='justify' color="text.secondary">
-                {"Our team of professionals is based in the US and is passionate about helping your business thrive. We specialize in providing comprehensive Bookkeeping and CFO services."}
+              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary">
+                Our team of professionals is based in the US 
+                and is passionate about helping your business thrive. 
+                We specialize in providing comprehensive Bookkeeping, CFO and Tax Planner services.
               </Typography>
               
-              <Typography variant="h6" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2}>
-                {"From small two-founder startups to larger teams, we have worked with a wide range of businesses. We understand the unique needs of startups and offer tailored solutions to support your success."}
+              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2}>
+                From small two-founder startups to larger teams, we have worked with 
+                a wide range of businesses. We understand the unique needs of startups
+                and offer tailored solutions to support your success.
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
@@ -71,7 +79,7 @@ export default function App() {
                 <Box
                   component="img"
                   sx={{
-                    maxWidth: 500,
+                    maxWidth: 700,
                     width: '100%',
                     height: 'fit-content',
                     objectFit: 'contain'
@@ -181,8 +189,10 @@ export default function App() {
             ))}
           </Carousel>
 
-          <Typography variant="body2" color="text.secondary" align="center" maxWidth='400px' mt={0.5}>
-            {"Seamlessly integrate with QuickBooks, Stripe, Shopify, Gusto, and more. Perfect for new US startups."}
+          <Typography variant="h6" color="text.secondary" align="center" maxWidth='600px' mt={0.5}>
+            Seamlessly integrate with 
+            QuickBooks, Stripe, Shopify, Gusto, and more.
+            Perfect for new US startups.
           </Typography>
           
         </Box>
@@ -192,11 +202,11 @@ export default function App() {
             {"What you get with us"}
           </Typography>
 
-          <Typography variant="body2" color="text.secondary" align="center" maxWidth='400px' mt={0.5}>
+          <Typography variant="h6" color="text.secondary" align="center" maxWidth='400px' mt={0.5}>
             {"Your finance assistant, no matter where you are on your entrepreneurial journey"}
           </Typography>
 
-          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(300px, 1fr))' sx={{display: 'grid', gap: 3, mt: 4}}>
+          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(300px, 1fr))' sx={{display: 'grid', gap: 3, mt: 7}}>
             {
               cards.map((card, index) => (
                 <Card {...card} key={index} />
@@ -205,7 +215,7 @@ export default function App() {
           </Grid>
         </Box>
 
-        <Box sx={{display: {xs: 'block', md: 'flex'}, mt: 15, py: 10, pt: 13}}>
+        <Box sx={{display: {xs: 'block', md: 'flex'}, mt: 5, py: 8, pt: 17}}>
           <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
             <Box
               component="img"
@@ -230,7 +240,7 @@ export default function App() {
                 fields.map((item, index) => (
                   <Box key={index} sx={{display: 'flex', alignItems: 'center', color: theme.palette.primary.main}}>
                     <CheckCircleRoundedIcon  />
-                    <Typography variant="body2" component="h3" gutterBottom mt={1} ml={1} color='text.primary' fontWeight='bold'>
+                    <Typography variant="h6" component="h3" gutterBottom mt={1} ml={1} color='text.primary' fontWeight='medium'>
                       {item}
                     </Typography>
                   </Box>
@@ -253,11 +263,11 @@ export default function App() {
             {"Pricing designed for every stage of business"}
           </Typography>
 
-          <Typography variant="body2" color="text.secondary" align="center" maxWidth='400px' mt={0.5}>
+          <Typography variant="h6" color="text.secondary" align="center" maxWidth='700px' mt={0.5}>
             {"Explore our straightforward and affordable pricing options designed to suit your business's specific requirements."}
           </Typography>
 
-          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(300px, 1fr))' sx={{display: 'grid', gap: 3, mt: 4}}>
+          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(300px, 1fr))' sx={{display: 'grid', gap: 3, mt: 7}}>
             {
               businesses.map((business, index) => (
                 <Business {...business} key={index} />
@@ -271,7 +281,7 @@ export default function App() {
             {"Our startups have achieved top-tier recognition"}
           </Typography>
 
-          <Box sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, mt: 4, flex: 1}}>
+          <Box sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, mt: 7, flex: 1}}>
             {
               achieved.map((achieve, index) => (
                 <Box
@@ -280,7 +290,8 @@ export default function App() {
                   sx={{
                     my: 2,
                     width: 'auto',
-                    height: 80,
+                    height: achieve.size,
+                    marginTop: achieve.marginTop,
                     objectFit: 'contain',
                     cursor: 'pointer'
                   }}
@@ -311,8 +322,8 @@ export default function App() {
             {"Frequently Asked Questions"}
           </Typography>
 
-          <Typography variant="body2"  align="center" maxWidth='500px' mt={0.5}>
-            {"Lorem ipsum dolor sit amet consectetur adipiscing elit aenean id volutpat imperdiet quis at pellentesque nunc commodo nunc purus pulvinar nisi fusce."}
+          <Typography variant="h6"  align="center" maxWidth='600px' mt={0.5}>
+          We make business world better by making business owners more educated in their finances. 
           </Typography>
 
           <Box mt={4}>

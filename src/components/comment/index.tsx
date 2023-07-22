@@ -9,7 +9,7 @@ type Props = {
 
 export default function Comment({text, component}: Props) {
   return (
-    <Box sx={{background: '#ccc', borderRadius: 5, p: 3, py: 4}}>
+    <Box sx={{background: 'linear-gradient(180deg, #FFF 15%, #CFD4D4 100%);', borderRadius: 5, p: 3, py: 4}}>
       <Box
         component="img"
         sx={{

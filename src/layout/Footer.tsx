@@ -23,10 +23,6 @@ const socials = [
     link: '/'
   },
   {
-    component: () => <TwitterIcon />,
-    link: '/'
-  },
-  {
     component: () => <InstagramIcon />,
     link: '/'
   },
@@ -71,23 +67,24 @@ function Footer() {
         <Typography variant="body2" color="text.secondary" align="center">
           {"info@go4profit.us"}
         </Typography>
-        <Typography variant="body2" color="text.secondary" align="center" sx={{textDecoration: 'underline'}}>
-          {"+1(510) 858-6558"}
+        <Typography variant="body2" color="text.secondary" align="center" >
+          {"+1(917) 200-7609"}
         </Typography>
         <Typography variant="body2" color="text.secondary" align="center">
-          {"Zeni Inc.420 Florence St,"}
+          {"1 Liberty St #226"}
         </Typography>
 
         <Typography variant="body2" color="text.secondary" align="center">
-          {"Suite 300Palo Alto, CA 94301"}
+          {"New York, NY 10006"}
         </Typography>
 
         <Box sx={{ display: 'flex', my: 3, mb: 1 }}>
           {
             socials.map((social, index) => (
-              <Box key={index} sx={{color: "text.secondary", mx: 0.5}}>
+              <Box key={index} sx={{color: "text.secondary", mx: 0.5, cursor: 'pointer'}} onClick={() => window.open(social.link, '__blank')}>
                 <social.component />
               </Box>
+              
             ))
           }
         </Box>
@@ -95,7 +92,7 @@ function Footer() {
         <Divider sx={{width: '100%', my: 3}} />
         
         <Typography variant="body2" color="text.secondary" align="center">
-          {"Copyright © "} {new Date().getFullYear()} {" BRIX Templates | All Rights Reserved"}
+          {"Copyright © "} {new Date().getFullYear()} {" Go4Profit | All Rights Reserved"}
         </Typography>
       </Box>
     </Container>

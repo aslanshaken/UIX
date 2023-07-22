@@ -54,7 +54,7 @@ export const cards = [
   },
   {
     title: 'CFO',
-    description: "We provide CFO services alongside Full Cycle Bookkeeping, offering financial report explanations, analysis, strategy development, budgeting, forecasting, risk management, and cash flow oversight"
+    description: "We provide CFO services alongside Bookkeeping, offering financial report explanations, analysis, strategy development, budgeting, forecasting, risk management, and cash flow oversight"
   },
   {
     title: 'TAX Planner',
@@ -108,41 +108,49 @@ export const businesses = [
 export const achieved = [
   {
     name: 'spotify',
-    logo: 'spotfiy.png',
-    url: "https://open.spotify.com/"
+    logo: 'spotify.png',
+    url: "https://open.spotify.com/",
+    size: 50,
+    marginTop:0
   },
   {
     name: 'forbe',
     logo: 'forbe.png',
-    url: "https://www.forbes.com/"
+    url: "https://www.forbes.com/",
+    size: 50,
+    marginTop:0
   },
   {
     name: 'inc',
     logo: 'inc.png',
-    url: "https://www.inc.com/"
+    url: "https://www.inc.com/",
+    size: 80,
+    marginTop:-2
   },
   {
     name: 'apple',
     logo: 'apple.png',
-    url: "https://www.apple.com/apple-podcasts/"
+    url: "https://www.apple.com/apple-podcasts/",
+    size: 80,
+    marginTop:-2
   },
 ]
 
 export const FAQs = [
   {
-    title: 'What is Webflow and why is it the best website builder?',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+    title: 'What is difference between bookkeeping and accounting?',
+    desc: 'Bookkeeping and accounting serve separate and distinc functions in the running of a business. Bookkeeping is the function of documenting and maintaining records of transactions. Accounting is the act of actually analyzing and interpreting the documentation and turning into meaningful data.'
   },
   {
-    title: 'When did Webflow was founded?',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+    title: 'Do we have to meet in person?',
+    desc: 'It would be a pleasure to have a face-to-face meeting with you, but please know that our process is entirely online, which we have designed to ensure the utmost security and to uphold the integrity of our brand. You can trust that our clients are always a top priority, and we offer 24/7 support and are always available for meetings.'
   },
   {
-    title: 'How do you clone a Webflow Template?',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+    title: 'If I don not see my option in your three packages, what do I do?',
+    desc: 'If you don not see your option it doesn not mean that your business doesn not fit us. We always provide a Free Consultation where we do a Diagnostic review of your bookkeeping. Make a call and let us help you!'
   },
   {
-    title: 'Why is BRIX Templates the best Webflow agency?',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes. '
+    title: 'What can I expect on my call?',
+    desc: 'We will call you at the time you select. Your bookkeeping expert will ask you a few questions about your business and your needs and make a recommendation on what service will work best for you. The whole call should only take 15-30 minutes.'
   },
 ]

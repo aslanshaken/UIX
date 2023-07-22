@@ -42,7 +42,7 @@ function Header() {
             src="/images/go4profit.png"
           />
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center',}}>
             {pages.map((page, index, {length}) => (
               <Box key={page} sx={{display: 'flex'}}>
                 <Button
