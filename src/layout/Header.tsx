@@ -11,8 +11,14 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Divider, useMediaQuery } from '@mui/material';
 import { useTheme } from 'styled-components';
+import { smoothScroll } from '../utils/service';
 
-const pages = ['About Us', 'Services', 'Why Us', 'Pricing'];
+const pages = [
+  { id: 'about-us', title: 'About Us' },
+  { id: 'services', title: 'Services' },
+  { id: 'why-us', title: 'Why Us' },
+  { id: 'pricing', title: 'Pricing' }
+];
 
 function Header() {
   const theme = useTheme();
@@ -24,8 +30,9 @@ function Header() {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (id: string) => {
     setAnchorElNav(null);
+    smoothScroll(id)
   };
 
   return (
@@ -44,12 +51,12 @@ function Header() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center',}}>
             {pages.map((page, index, {length}) => (
-              <Box key={page} sx={{display: 'flex'}}>
+              <Box key={page.id} sx={{display: 'flex'}}>
                 <Button
-                  onClick={handleCloseNavMenu}
+                  onClick={() => handleCloseNavMenu(page.id)}
                   sx={{ my: 2,  display: 'block', color: '#000' }}
                 >
-                  {page}
+                  {page.title}
                 </Button>
                 {
                   index + 1 !== length && <Box sx={{display: 'flex', alignItems: 'center', mx: 1, color: '#000'}}>•</Box>
@@ -61,7 +68,7 @@ function Header() {
           <Box sx={{ flexGrow: {xs: 1, md: 0}, display: {xs: 'none', sm: 'flex'}, justifyContent: 'end' }}>
             <Button
               key={'schedule'}
-              onClick={handleCloseNavMenu}
+              onClick={() => handleCloseNavMenu('schedule')}
               sx={{ my: 2, display: 'block', color: '#000' }}
             >
               Schedule Demo
@@ -97,15 +104,15 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={() => handleCloseNavMenu(page.id)}>
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
               {
                 onlySmallScreen &&
                 <>
                   <Divider />
-                  <MenuItem key={'schedule'} onClick={handleCloseNavMenu}>
+                  <MenuItem key={'schedule'} onClick={() => handleCloseNavMenu('schedule')}>
                     <Typography textAlign="center">Schedule Demo</Typography>
                   </MenuItem>
                 </>

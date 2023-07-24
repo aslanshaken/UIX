@@ -5,7 +5,7 @@ import Layout from '../layout';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTheme } from 'styled-components';
-import { Divider, Grid } from '@mui/material';
+import { Divider, Grid, useMediaQuery } from '@mui/material';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 import Comment from '../components/comment';
 import { FAQs, achieved, businesses, cards, comments, fields, partners } from '../utils/constants';
@@ -14,17 +14,22 @@ import Partner from '../components/partner/partner';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import Business from '../components/business';
 import Faq from '../components/faq';
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+import { Autoplay } from 'swiper/modules';
+import { smoothScroll } from '../utils/service';
 
 export default function App() {
   const theme = useTheme()
+  const onlySmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const downLgScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Layout>
       <Container maxWidth="lg">
         <Box mt={10} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Typography variant="h3" component="h6" gutterBottom textAlign='center'>
+          <Typography variant="h3" component="h6" gutterBottom textAlign='center' sx={{ fontSize: { xs: '2rem', sm: '3rem' } }}>
             Understand Your Business with 
             <br/>
             Expert Bookkeeping and Strategic CFO Services
@@ -42,14 +47,14 @@ export default function App() {
 
           <Button
             variant="contained"
-            onClick={() => {console.log('jjj')}}
+            onClick={() => {smoothScroll('schedule')}}
             sx={{ my: 2,  display: 'block', borderRadius: 10 }}
           >
             Get Started
           </Button>
         </Box>
 
-        <Box mt={20}>
+        <Box id="about-us" mt={20}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Built by founders, for founders"}
           </Typography>
@@ -62,13 +67,13 @@ export default function App() {
 
           <Box sx={{display: {xs: 'block', md: 'flex'}}}>
             <Box flex={1} sx={{pr: {xs: 0, md: 4}, pb: {xs: 4, md: 0}}}>
-              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary">
+              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" sx={{fontSize: {xs: '1.3rem', sm: '1.5rem'}}}>
                 Our team of professionals is based in the US 
                 and is passionate about helping your business thrive. 
                 We specialize in providing comprehensive Bookkeeping, CFO and Tax Planner services.
               </Typography>
               
-              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2}>
+              <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2} sx={{fontSize: {xs: '1.3rem', sm: '1.5rem'}}}>
                 From small two-founder startups to larger teams, we have worked with 
                 a wide range of businesses. We understand the unique needs of startups
                 and offer tailored solutions to support your success.
@@ -90,14 +95,14 @@ export default function App() {
                 <Box sx={{display: 'flex'}}>
                   <Button
                     variant="contained"
-                    onClick={() => {console.log('jjj')}}
+                    onClick={() => {smoothScroll('schedule')}}
                     sx={{  display: 'block', my: 2, height: 'fit-content', fontSize: '0.75rem' }}
                   >
                     Schedule Demo
                   </Button>
 
                   <Button
-                    onClick={() => { console.log('jjj') }}
+                    onClick={() => { smoothScroll('services')}}
                     sx={{ display: 'flex', my: 2, ml: 2, height: 'fit-content', fontSize: '0.75rem', '& .MuiButton-endIcon': { mt: -0.5 }}}
                     endIcon={<KeyboardArrowRightOutlinedIcon />}
                   >
@@ -127,68 +132,25 @@ export default function App() {
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"We partner with the world’s best"}
           </Typography>
-
-          <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlay
-            autoPlaySpeed={1}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            customTransition="all 1s linear"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024
-                },
-                items: 3,
-                partialVisibilityGutter: 40
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0
-                },
-                items: 1,
-                partialVisibilityGutter: 30
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464
-                },
-                items: 2,
-                partialVisibilityGutter: 30
-              }
+          <Swiper
+            slidesPerView={onlySmallScreen ? 1 : downLgScreen ? 3: 4}
+            loop={true}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
             }}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl={false}
-            shouldResetAutoplay
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={2}
-            swipeable
-            transitionDuration={5000}
+            navigation={false}
+            modules={[Autoplay]}
+            className="mySwiper"
           >
             {partners.map((partner, i) => (
-              <Partner key={i} partner={partner} /> 
+              <SwiperSlide key={i}>
+                <Partner partner={partner} />
+              </SwiperSlide>
             ))}
-          </Carousel>
-
+          </Swiper>
+          
           <Typography variant="h6" color="text.secondary" align="center" maxWidth='600px' mt={0.5}>
             Seamlessly integrate with 
             QuickBooks, Stripe, Shopify, Gusto, and more.
@@ -197,7 +159,7 @@ export default function App() {
           
         </Box>
 
-        <Box mt={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box id="services" my={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"What you get with us"}
           </Typography>
@@ -215,7 +177,7 @@ export default function App() {
           </Grid>
         </Box>
 
-        <Box sx={{display: {xs: 'block', md: 'flex'}, mt: 5, py: 8, pt: 17}}>
+        <Box id="why-us" sx={{display: {xs: 'block', md: 'flex'}, mt: 5, pt: 5, pb: 8}}>
           <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
             <Box
               component="img"
@@ -249,7 +211,7 @@ export default function App() {
             </Box>
             <Button
               variant="contained"
-              onClick={() => {console.log('jjj')}}
+              onClick={() => {smoothScroll('schedule')}}
               sx={{  display: 'block', my: 2, height: 'fit-content', borderRadius: 10, fontSize: '0.75rem' }}
             >
               Schedule Demo
@@ -258,7 +220,7 @@ export default function App() {
           </Box>
         </Box>
 
-        <Box mt={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box id="pricing" mt={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Pricing designed for every stage of business"}
           </Typography>
@@ -281,7 +243,11 @@ export default function App() {
             {"Our startups have achieved top-tier recognition"}
           </Typography>
 
-          <Box sx={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, mt: 7, flex: 1}}>
+          <Box sx={{
+            display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: {xs: 5, sm: 10}, mt: 7, flex: 1, mx: 1, '@media (max-width: 500px)': {
+              flexWrap: 'nowrap',
+              flexDirection: 'column'
+          }}}>
             {
               achieved.map((achieve, index) => (
                 <Box
@@ -304,7 +270,7 @@ export default function App() {
           </Box>
         </Box>
 
-        <Box mt={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box id="schedule" mt={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Book an Intro Call "}
           </Typography>

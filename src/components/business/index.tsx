@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import { useTheme } from 'styled-components';
 import Button from '@mui/material/Button';
+import { smoothScroll } from '../../utils/service';
+import Slider from '../slider';
 
 type Props = {
   title: string;
@@ -47,22 +49,23 @@ export default function Business({ title, desc, price, rate, items }: Props) {
 
       {
         !price && 
-        <Box
-          component="img"
-          sx={{
-            my: 2,
-            width: '70%',
-            height: 'fit-content',
-            objectFit: 'contain'
-          }}
-          alt="The house from the offer."
-          src="/images/price.png"
-        />
+        // <Box
+        //   component="img"
+        //   sx={{
+        //     my: 2,
+        //     width: '70%',
+        //     height: 'fit-content',
+        //     objectFit: 'contain'
+        //   }}
+        //   alt="The house from the offer."
+        //   src="/images/price.png"
+        // />
+        <Slider />
       }
 
       <Button
         variant='contained'
-        onClick={() => { console.log('jjj') }}
+        onClick={() => { smoothScroll('schedule') }}
         sx={{ display: 'flex',my: 5, mt: 0.5,  height: 'fit-content', fontSize: '0.75rem', '& .MuiButton-endIcon': { mt: -0.5 }}}
       >
         Book a Demo

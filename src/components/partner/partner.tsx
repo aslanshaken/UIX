@@ -8,12 +8,12 @@ type Props = {
 
 export default function Partner({ partner }: Props) {
   return (
-    <Box sx={{background: '#ccc', borderRadius: 5, p: 3, py: 4}}>
+    <Box sx={{borderRadius: 5, p: 3, py: 4}}>
       <Box
         component="img"
         sx={{
           width: 'auto',
-          height: 103,
+          height: {xs: 55, sm: 50, md: 65},
           objectFit: 'contain'
         }}
         alt="The house from the offer."

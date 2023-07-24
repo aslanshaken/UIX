@@ -12,9 +12,9 @@
     "@testing-library/user-event": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-multi-carousel": "^2.8.4",
     "react-scripts": "latest",
-    "styled-components": "latest"
+    "styled-components": "latest",
+    "swiper": "^10.0.4"
   },
   "scripts": {
     "tsc": "./node_modules/.bin/tsc",

@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import App from './pages';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './utils/theme';
-
+import './utils/global.css'
 
 ReactDOM.render(
   <React.Fragment>
