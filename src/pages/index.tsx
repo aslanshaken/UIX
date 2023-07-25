@@ -28,20 +28,20 @@ export default function App() {
   return (
     <Layout>
       <Container maxWidth="lg">
-        <Box mt={10} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box mt={20} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h3" component="h6" gutterBottom textAlign='center' sx={{ fontSize: { xs: '1.5rem', sm: '3rem' } }}>
             Understand Your Business with 
-            <br/>
+            
             Expert Bookkeeping and Strategic CFO Services
           </Typography>
 
           <Typography variant="h5" color="GrayText" align="center" maxWidth={500} margin='auto' my={3}  sx={{ fontSize: { xs: '1.3rem', sm: '1.5rem' } }}>
-            {"One team for all your accounting needs"}
-            <br/>
+            {"One team for all your accounting needs. "}
+            
             <Box component="span" sx={{fontWeight: 'bold'}}>
               Full Cycle Bookkeeping, CFO and Tax Planner
             </Box>
-            <br/>
+            
             {" for startups and growing businesses"}
           </Typography>
 

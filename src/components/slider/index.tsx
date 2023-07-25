@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import * as React from 'react';
 
 export default function Slider() {
-  const [value, setValue] = React.useState<number>(499)
+  const [value, setValue] = React.useState<number>(15000)
 
   const monthValue = React.useMemo(() => {
     let val = 499;
@@ -18,14 +18,6 @@ export default function Slider() {
   return (
     <div className="pricing-details-wrap">
       <div className="price-display-container">
-        {/* <Box
-          component={'div'}
-          display='none'
-          id="get-core-container"
-          className="pilot-plus-wrap"
-        >
-          <div>Pilot Plus</div>
-        </Box> */}
          <Box
           component={'div'}
           display='block'
@@ -33,9 +25,9 @@ export default function Slider() {
         >
           {
             value >= 200000 ?
-              <span className="cost-display">Pilot Plus</span> :
+              <span className="cost-display">Plus</span> :
               <span>
-                <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">0</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually<sup>1</sup></span>
+                <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">0</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually</span>
               </span>
           }
         </Box>
