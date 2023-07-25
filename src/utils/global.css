@@ -49,8 +49,8 @@
   display: none;
   margin-right: 10px;
   font-size: 32px;
-    font-weight: 600;
-    text-decoration: line-through;
+  font-weight: 600;
+  text-decoration: line-through;
 }
 
 .cost-display {
@@ -119,7 +119,7 @@ input[type=range] {
 }
 
 .price-range-tick {
-  width: 11px px;
+  width: 11px;
   height: 11px;
   background-color: #fff;
   border: 2px solid #e0e0e0;

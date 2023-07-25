@@ -6,7 +6,13 @@ export default function Slider() {
   const [value, setValue] = React.useState<number>(499)
 
   const monthValue = React.useMemo(() => {
-    return (value / 10).toLocaleString('en-US')
+    let val = 499;
+    if (value >= 30000 && value <60000) val = 559;
+    else if (value >= 60000 && value <100000) val = 639;
+    else if (value >= 100000 && value <150000) val = 739;
+    else if (value >= 150000 && value < 200000) val = 839;
+
+    return val.toLocaleString('en-US')
   }, [value])
 
   return (
@@ -25,12 +31,18 @@ export default function Slider() {
           display='block'
           id="core-plan-cost-container" className="plan-pricing-price"
         >
-          <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">0</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually<sup>1</sup></span>
+          {
+            value >= 200000 ?
+              <span className="cost-display">Pilot Plus</span> :
+              <span>
+                <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">0</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually<sup>1</sup></span>
+              </span>
+          }
         </Box>
       </div>
       <div className="price-core-range-container">
         <div className="track-container">
-          <div className="w-embed"><input type="range" id="core-plan-expenses" min="0" max="50000" step="50" value={value} onChange={(e) => {
+          <div className="w-embed"><input type="range" id="core-plan-expenses" min="0" max="200000" step="250" value={value} onChange={(e) => {
             setValue(parseFloat(e.target.value))
           }} /></div>
           <div className="price-range-tick _1"></div>
@@ -41,7 +53,7 @@ export default function Slider() {
         </div>
       </div>
       <div id="plan-pricing-core-expenses-display-container" className="expenses-wrap">
-        <div><span id="core-plan-expenses-display">${value.toLocaleString('en-US')}</span>&nbsp;<span className="plan-pricing-unit">in monthly expenses</span></div>
+        <div><span id="core-plan-expenses-display">${value.toLocaleString('en-US')}{ value >= 200000 && '+'}</span>&nbsp;<span className="plan-pricing-unit">in monthly expenses</span></div>
       </div>
     </div>
   );
