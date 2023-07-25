@@ -181,8 +181,9 @@ export default function App() {
               component="img"
               sx={{
                 maxWidth: 500,
+                maxHeight: 500,
                 width: '100%',
-                height: 'fit-content',
+                height: 'auto',
                 objectFit: 'contain'
               }}
               alt="The house from the offer."
