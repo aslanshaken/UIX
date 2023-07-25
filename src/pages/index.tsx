@@ -175,7 +175,7 @@ export default function App() {
           </Grid>
         </Box>
 
-        <Box id="why-us" sx={{display: {xs: 'block', md: 'flex'}, mt: 5, pt: 5, pb: 8}}>
+        <Box id="why-us" sx={{display: {xs: 'block', md: 'flex'}}}>
           <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
             <Box
               component="img"
@@ -190,7 +190,7 @@ export default function App() {
             />
           </Box>
 
-          <Box flex={1} sx={{pl: {xs: 0, md: 5}, pt: {xs: 5, md: 0}}}>
+          <Box flex={1} sx={{pl: {xs: 0, md: 5}}}>
             <Typography variant="h5" component="h3" gutterBottom color={theme.palette.primary.main} fontWeight="bold">
               {"We deeply care about every startup we work with, providing personalized support for their success"}
             </Typography>
@@ -218,7 +218,7 @@ export default function App() {
           </Box>
         </Box>
 
-        <Box id="pricing" mt={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box id="pricing" mt={7} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Pricing designed for every stage of business"}
           </Typography>
