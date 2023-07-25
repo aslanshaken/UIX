@@ -12,25 +12,25 @@ export default function Slider() {
   return (
     <div className="pricing-details-wrap">
       <div className="price-display-container">
-        <Box
+        {/* <Box
           component={'div'}
           display='none'
           id="get-core-container"
           className="pilot-plus-wrap"
         >
           <div>Pilot Plus</div>
-        </Box>
+        </Box> */}
          <Box
           component={'div'}
           display='block'
           id="core-plan-cost-container" className="plan-pricing-price"
         >
-          <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">0</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually<sup>1</sup></span>
+          <span className="pricing-price-discount dollar">$</span><span id="core-cost-display" className="pricing-price-discount">499</span><span className="cost-display">$</span><span id="core-plan-cost-display" className="cost-display">{monthValue}</span><span className="plan-unit">/mo billed annually</span>
         </Box>
       </div>
       <div className="price-core-range-container">
         <div className="track-container">
-          <div className="w-embed"><input type="range" id="core-plan-expenses" min="0" max="50000" step="50" value={value} onChange={(e) => {
+          <div className="w-embed"><input type="range" id="core-plan-expenses" min="0" max="8000" step="50" value={value} onChange={(e) => {
             setValue(parseFloat(e.target.value))
           }} /></div>
           <div className="price-range-tick _1"></div>

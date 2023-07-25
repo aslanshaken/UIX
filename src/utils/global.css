@@ -20,7 +20,6 @@
   justify-content: center;
   display: flex;
   padding: 10px 20px;
-  background-color: #fff;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -28,7 +27,7 @@
 .expenses-wrap {
   justify-content: center;
   display: flex;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .pilot-plus-wrap {
@@ -49,8 +48,8 @@
   display: none;
   margin-right: 10px;
   font-size: 32px;
-    font-weight: 600;
-    text-decoration: line-through;
+  font-weight: 600;
+  text-decoration: line-through;
 }
 
 .cost-display {
@@ -62,7 +61,7 @@
 
 .plan-unit {
   color: #999;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 sup {

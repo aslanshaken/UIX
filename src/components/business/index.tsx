@@ -41,7 +41,7 @@ export default function Business({ title, desc, price, rate, items }: Props) {
 
       {
         price && 
-        <Typography variant="h5" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={6}>
+        <Typography variant="h5" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={14}>
           {price} 
         <Typography variant='caption'>{rate}</Typography>
         </Typography>
@@ -49,17 +49,6 @@ export default function Business({ title, desc, price, rate, items }: Props) {
 
       {
         !price && 
-        // <Box
-        //   component="img"
-        //   sx={{
-        //     my: 2,
-        //     width: '70%',
-        //     height: 'fit-content',
-        //     objectFit: 'contain'
-        //   }}
-        //   alt="The house from the offer."
-        //   src="/images/price.png"
-        // />
         <Slider />
       }
 

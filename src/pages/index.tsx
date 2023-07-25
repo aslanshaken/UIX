@@ -28,7 +28,7 @@ export default function App() {
   return (
     <Layout>
       <Container maxWidth="lg">
-        <Box mt={10} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box mt={20} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h3" component="h6" gutterBottom textAlign='center' sx={{ fontSize: { xs: '2rem', sm: '3rem' } }}>
             Understand Your Business with 
             <br/>
@@ -132,12 +132,17 @@ export default function App() {
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"We partner with the world’s best"}
           </Typography>
+          <Typography variant="h6" color="text.secondary" align="center" maxWidth='600px' mt={0.5}>
+            Seamlessly integrate with 
+            QuickBooks, Stripe, Shopify, Gusto, and more.
+            Perfect for new US startups.
+          </Typography>
           <Swiper
             slidesPerView={onlySmallScreen ? 1 : downLgScreen ? 3: 4}
             loop={true}
             centeredSlides={true}
             autoplay={{
-              delay: 2000,
+              delay: 800,
               disableOnInteraction: false,
             }}
             navigation={false}
@@ -150,16 +155,9 @@ export default function App() {
               </SwiperSlide>
             ))}
           </Swiper>
-          
-          <Typography variant="h6" color="text.secondary" align="center" maxWidth='600px' mt={0.5}>
-            Seamlessly integrate with 
-            QuickBooks, Stripe, Shopify, Gusto, and more.
-            Perfect for new US startups.
-          </Typography>
-          
         </Box>
 
-        <Box id="services" my={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box id="services" my={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"What you get with us"}
           </Typography>
