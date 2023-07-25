@@ -18,14 +18,14 @@ export default function Slider() {
   return (
     <div className="pricing-details-wrap">
       <div className="price-display-container">
-        <Box
+        {/* <Box
           component={'div'}
           display='none'
           id="get-core-container"
           className="pilot-plus-wrap"
         >
           <div>Pilot Plus</div>
-        </Box>
+        </Box> */}
          <Box
           component={'div'}
           display='block'

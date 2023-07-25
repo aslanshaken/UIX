@@ -36,7 +36,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{background: 'transparent', boxShadow: 'none !important'}}>
+    <AppBar position="fixed" sx={{background: 'white', boxShadow: 'none !important'}}>
       <Container maxWidth="xl" sx={{pl: {xs: 0, md: 0}}}>
         <Toolbar disableGutters>
           <Box
