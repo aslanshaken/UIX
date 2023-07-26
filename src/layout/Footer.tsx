@@ -18,21 +18,21 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const socials = [
-  {
-    component: () => <FacebookIcon />,
-    link: '/'
-  },
+  // {
+  //   component: () => <FacebookIcon />,
+  //   link: '/'
+  // },
   {
     component: () => <InstagramIcon />,
-    link: '/'
+    link: 'https://www.instagram.com/ainura.finance'
   },
   {
     component: () => <LinkedInIcon />,
-    link: '/'
+    link: 'https://www.linkedin.com/company/go4profit/mycompany/'
   },
   {
     component: () => <YouTubeIcon />,
-    link: '/'
+    link: 'https://www.youtube.com/@go4profitadvisor'
   },
 ];
 
