@@ -109,28 +109,28 @@ export const achieved = [
   {
     name: 'spotify',
     logo: 'spotify.png',
-    url: "https://open.spotify.com/",
+    url: "https://open.spotify.com/episode/22f5saGuKMZuGuEJ7TorJd",
     size: 50,
     marginTop:0
   },
   {
     name: 'forbe',
     logo: 'forbe.png',
-    url: "https://www.forbes.com/",
+    url: "https://www.forbes.com/sites/jonathankeane/2023/04/11/whizz-raises-34-million-for-its-e-bike-subscriptions/?sh=9daf24122f8e",
     size: 50,
     marginTop:0
   },
   {
     name: 'inc',
     logo: 'inc.png',
-    url: "https://www.inc.com/",
+    url: "https://www.inc.com/profile/seka-moving",
     size: 80,
     marginTop:-2
   },
   {
     name: 'apple',
     logo: 'apple.png',
-    url: "https://www.apple.com/apple-podcasts/",
+    url: "https://podcasts.apple.com/us/podcast/sustainable-businesses-on-two-wheels-with-feras-bashnak/id1571396481?i=1000585752104",
     size: 80,
     marginTop:-2
   },
