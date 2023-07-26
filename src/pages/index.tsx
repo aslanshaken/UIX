@@ -29,13 +29,13 @@ export default function App() {
     <Layout>
       <Container maxWidth="lg">
         <Box mt={20} px={4} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Typography variant="h3" component="h6" gutterBottom textAlign='center' sx={{ fontSize: { xs: '1.5rem', sm: '3rem' } }}>
+          <Typography variant="h3" component="h6" gutterBottom textAlign='center' sx={{ fontSize: { xs: '1.8rem', sm: '3rem' } }}>
             Understand Your Business with 
             
             Expert Bookkeeping and Strategic CFO Services
           </Typography>
 
-          <Typography variant="h5" color="GrayText" align="center" maxWidth={500} margin='auto' my={3}  sx={{ fontSize: { xs: '1.3rem', sm: '1.5rem' } }}>
+          <Typography variant="h5" color="GrayText" align="center" maxWidth={500} margin='auto' my={3}  sx={{ fontSize: { xs: '1rem', sm: '1.5rem' } }}>
             {"One team for all your accounting needs. "}
             
             <Box component="span" sx={{fontWeight: 'bold'}}>
@@ -70,7 +70,7 @@ export default function App() {
               <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" sx={{fontSize: {xs: '1.3rem', sm: '1.5rem'}}}>
                 Our team of professionals is based in the US 
                 and is passionate about helping your business thrive. 
-                We specialize in providing comprehensive Bookkeeping, CFO and Tax Planner services.
+                We are experts in offering complete Bookkeeping, CFO, and Tax Planner services.
               </Typography>
               
               <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2} sx={{fontSize: {xs: '1.3rem', sm: '1.5rem'}}}>
@@ -114,7 +114,7 @@ export default function App() {
           </Box>
         </Box>
 
-        <Box mt={15}>
+        {/* <Box mt={15}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Why other love us"}
           </Typography>
@@ -126,7 +126,7 @@ export default function App() {
               ))
             }
           </Grid>
-        </Box>
+        </Box> */}
 
         <Box mt={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
@@ -278,8 +278,8 @@ export default function App() {
             component="div"
             sx={{ minWidth: { md: 1024, sm: 640, xs: 320}, height: {md: 700, sm: 1020, xs: 1000}}}
             className='calendly-inline-widget'
-            data-url="https://calendly.com/aslanshaken/30min" 
-                />
+            data-url="https://calendly.com/go4profit/discoverycall" 
+            />
         </Box>
 
         <Box my={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center',  color: '#9795B5'}}>
@@ -294,7 +294,7 @@ export default function App() {
           <Box mt={4}>
             {
               FAQs.map((faq, index) => (
-                <Faq key={index} {...faq} opened={index === 0} />
+                <Faq key={index} {...faq} />
               ))
             }
           </Box>

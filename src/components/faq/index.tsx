@@ -18,7 +18,7 @@ export default function Faq({ title, desc, opened = false }: Props) {
     <Box sx={{ border: '1px solid #5D5A88', borderRadius: 5, pl: 3.5, pr: 2, py: 2.5, maxWidth: 700, my: 2 }}>
 
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-        <Typography variant="h6" component="h3" gutterBottom textAlign='center' fontWeight='bold' color='#5D5A88'>
+        <Typography  gutterBottom fontWeight='bold' color='#5D5A88' sx={{ fontSize: { sm: '1rem' } }}>
           {title}
         </Typography>
 
