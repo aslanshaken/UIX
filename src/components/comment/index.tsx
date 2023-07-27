@@ -20,7 +20,7 @@ export default function Comment({text, component}: Props) {
         alt="The house from the offer."
         src="/images/quote.png"
       />
-      <Typography variant="body1" component="h3" gutterBottom textAlign='center' fontWeight='normal' fontStyle='italic' mt={2}>
+      <Typography variant="body1" component="h3" gutterBottom textAlign='center' fontWeight='normal'  mt={2}>
         {text}
       </Typography>
       <Box sx={{display: 'flex', justifyContent: 'center', mt: 3}}>

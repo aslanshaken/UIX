@@ -3,7 +3,9 @@ import Box from '@mui/material/Box';
 
 export const comments = [
   {
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    text: `Thank you for teaching me proper accounting practices! Your 
+    financial control saved us $17k on fraud transactions and improved 
+    our inventory tracking for accurate cost of goods sold. `,
     component: <Box
       component="img"
       sx={{
@@ -16,7 +18,10 @@ export const comments = [
     />
   },
   {
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    text: `Working with you has been the best decision ever!
+     You've streamlined our finances and freed me up to focus on
+      business strategy. I look forward to managing any future 
+      ventures through your guidance.`,
     component: <Box
       component="img"
       sx={{
@@ -29,7 +34,10 @@ export const comments = [
     />
   },
   {
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    text: ` Their expertise in bookkeeping 
+    and CFO services has brought immense value to our business. Highly
+     professional and reliable, we've gained better financial control
+      and made informed decisions.`,
     component: <Box
       component="img"
       sx={{

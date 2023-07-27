@@ -114,7 +114,7 @@ export default function App() {
           </Box>
         </Box>
 
-        {/* <Box mt={15}>
+        <Box mt={15}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Why other love us"}
           </Typography>
@@ -126,7 +126,7 @@ export default function App() {
               ))
             }
           </Grid>
-        </Box> */}
+        </Box>
 
         <Box mt={15} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
