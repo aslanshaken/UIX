@@ -57,7 +57,7 @@ export default function Business({ title, desc, price, rate, items }: Props) {
         onClick={() => { smoothScroll('schedule') }}
         sx={{ display: 'flex',my: 5, mt: 0.5,  height: 'fit-content', fontSize: '0.75rem', '& .MuiButton-endIcon': { mt: -0.5 }}}
       >
-        Book a Demo
+        Book a Call
       </Button>
 
       {

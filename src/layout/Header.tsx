@@ -71,7 +71,7 @@ function Header() {
               onClick={() => handleCloseNavMenu('schedule')}
               sx={{ my: 2, display: 'block', color: '#000' }}
             >
-              Schedule Demo
+              Book a Call
             </Button>
           </Box>
 
@@ -113,7 +113,7 @@ function Header() {
                 <>
                   <Divider />
                   <MenuItem key={'schedule'} onClick={() => handleCloseNavMenu('schedule')}>
-                    <Typography textAlign="center">Schedule Demo</Typography>
+                    <Typography textAlign="center">Book a Call</Typography>
                   </MenuItem>
                 </>
                 

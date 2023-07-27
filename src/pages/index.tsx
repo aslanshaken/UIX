@@ -47,7 +47,7 @@ export default function App() {
 
           <Button
             variant="contained"
-            onClick={() => {smoothScroll('schedule')}}
+            onClick={() => {smoothScroll('services')}}
             sx={{ my: 2,  display: 'block', borderRadius: 10 }}
           >
             Get Started
@@ -98,7 +98,7 @@ export default function App() {
                     onClick={() => {smoothScroll('schedule')}}
                     sx={{  display: 'block', my: 2, height: 'fit-content', fontSize: '0.75rem' }}
                   >
-                    Schedule Demo
+                    Book a Call
                   </Button>
 
                   <Button
@@ -213,7 +213,7 @@ export default function App() {
               onClick={() => {smoothScroll('schedule')}}
               sx={{  display: 'block', my: 2, height: 'fit-content', borderRadius: 10, fontSize: '0.75rem' }}
             >
-              Schedule Demo
+              Book a Call
             </Button>
            
           </Box>
