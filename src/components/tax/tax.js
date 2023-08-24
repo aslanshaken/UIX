@@ -19,24 +19,22 @@ export default function Tax() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const data = new FormData(event.currentTarget);
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('phone'),
-    // });
 
     // Create a download link for the PDF
     const downloadLink = document.createElement('a');
     downloadLink.href = 'https://drive.google.com/u/0/uc?id=1DUzTzsXLDRq405S6JkkHfx2_SEAG_haH&export=download';
     downloadLink.download = 'tax-100-deductions.pdf';
 
+    // Add an event listener to detect when the download is complete
+    downloadLink.addEventListener('click', () => {
+      // Open a new tab after the download is complete
+      window.open('https://forms.gle/wRVwDDd4PhwnxC5D8', '_blank');
+    });
+
     // Trigger the click event on the download link to initiate the download
     downloadLink.click();
-
-    setTimeout(() => {
-      window.open('https://forms.gle/wRVwDDd4PhwnxC5D8', '_blank');
-    }, 2000);
   };
+
 
   return (
     <ThemeProvider theme={defaultTheme} id="tax-deductions">
