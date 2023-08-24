@@ -44,9 +44,17 @@ function Header() {
             sx={{
               width: 'auto',
               height: 95,
+              cursor: 'pointer',
+              '&:hover': {
+                filter: 'brightness(1.2)',
+              },
             }}
             alt="The house from the offer."
             src="/images/go4profit.png"
+            onClick={()=> window.scrollTo({
+              top: 0,
+              behavior: 'smooth', // Optional: Smooth scrolling animation
+            })}
           />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center',}}>
