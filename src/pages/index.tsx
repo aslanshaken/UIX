@@ -231,9 +231,9 @@ export default function App() {
            
           </Box>
         </Box>
-
-       <Tax/>
-
+        <Box id="tax-deductions">
+          <Tax/>
+        </Box>
         <Box id="pricing" mt={7} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
             {"Pricing designed for every stage of business"}
