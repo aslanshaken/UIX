@@ -35,7 +35,7 @@ export default function Tax() {
 
     setTimeout(() => {
       window.open('https://forms.gle/wRVwDDd4PhwnxC5D8', '_blank');
-    }, 4000);
+    }, 2000);
   };
 
   return (
