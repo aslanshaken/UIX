@@ -18,9 +18,10 @@ import Faq from '../components/faq';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { scroller } from 'react-scroll';
-
 import { Autoplay } from 'swiper/modules';
 import { smoothScroll } from '../utils/service';
+import Tax from '../components/tax/tax';
+
 
 export default function App() {
   const theme = useTheme()
@@ -231,6 +232,8 @@ export default function App() {
            
           </Box>
         </Box>
+
+       <Tax/>
 
         <Box id="pricing" mt={7} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
