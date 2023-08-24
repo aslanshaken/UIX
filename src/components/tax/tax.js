@@ -9,6 +9,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { redirect } from 'react-router-dom';
 
 
 
@@ -18,25 +19,28 @@ export default function Tax() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('phone'),
-    });
+    // const data = new FormData(event.currentTarget);
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('phone'),
+    // });
 
     // Create a download link for the PDF
     const downloadLink = document.createElement('a');
-    downloadLink.href = '/../../../public/images/tax.pdf';
+    downloadLink.href = 'https://drive.google.com/u/0/uc?id=1DUzTzsXLDRq405S6JkkHfx2_SEAG_haH&export=download';
     downloadLink.download = 'tax-100-deductions.pdf';
 
     // Trigger the click event on the download link to initiate the download
     downloadLink.click();
 
+    setTimeout(() => {
+      window.open('https://forms.gle/wRVwDDd4PhwnxC5D8', '_blank');
+    }, 4000);
   };
 
   return (
     <ThemeProvider theme={defaultTheme} id="tax-deductions">
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="lg">
         <CssBaseline />
         <Box
           sx={{
@@ -46,14 +50,14 @@ export default function Tax() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 3, bgcolor: 'secondary.main' }}>
             <AccountBalanceIcon />
           </Avatar>
-          <Typography fontSize="15px">
+          <Typography variant="h5" component="h3" gutterBottom textAlign='center' textTransform='uppercase'>
             Download Top 100 Tax Deducations
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
+          <Box component="form" noValidate onSubmit={handleSubmit}>
+            {/* <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
@@ -95,7 +99,7 @@ export default function Tax() {
                   autoComplete="new-phone"
                 />
               </Grid>
-            </Grid>
+            </Grid> */}
             <Button
               type="submit"
               fullWidth
