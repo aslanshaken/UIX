@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Layout from '../layout';
@@ -16,6 +17,7 @@ import Business from '../components/business';
 import Faq from '../components/faq';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { scroller } from 'react-scroll';
 
 import { Autoplay } from 'swiper/modules';
 import { smoothScroll } from '../utils/service';
@@ -24,6 +26,17 @@ export default function App() {
   const theme = useTheme()
   const onlySmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const downLgScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  useEffect(() => {
+    if (window.location.pathname === '/why-us') {
+      // Use react-scroll to scroll to the 'why-us' element
+      scroller.scrollTo('why-us', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+      });
+    }
+  }, []);
 
   return (
     <Layout>
