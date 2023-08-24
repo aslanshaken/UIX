@@ -29,9 +29,8 @@ export default function App() {
   const downLgScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
-    if (window.location.pathname === '/why-us') {
-      // Use react-scroll to scroll to the 'why-us' element
-      scroller.scrollTo('why-us', {
+    if (window.location.pathname === '/tax-deductions') {
+      scroller.scrollTo('tax-deductions', {
         duration: 800,
         delay: 0,
         smooth: 'easeInOutQuart',

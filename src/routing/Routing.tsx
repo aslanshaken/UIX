@@ -6,7 +6,7 @@ const Routing = () => {
   return (
     <Routes>
       <Route path="/" />
-      <Route path="/why-us" />
+      <Route path="/tax-deductions" />
     </Routes>
   );
 };

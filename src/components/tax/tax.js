@@ -11,9 +11,11 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
+
 const defaultTheme = createTheme();
 
 export default function Tax() {
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -21,10 +23,19 @@ export default function Tax() {
       email: data.get('email'),
       password: data.get('phone'),
     });
+
+    // Create a download link for the PDF
+    const downloadLink = document.createElement('a');
+    downloadLink.href = '/../../../public/images/tax.pdf';
+    downloadLink.download = 'tax-100-deductions.pdf';
+
+    // Trigger the click event on the download link to initiate the download
+    downloadLink.click();
+
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={defaultTheme} id="tax-deductions">
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -80,7 +91,7 @@ export default function Tax() {
                   fullWidth
                   name="phone"
                   label="Phone"
-                  type="phone"
+                  type="tel"
                   id="phone"
                   autoComplete="new-phone"
                 />
