@@ -69,12 +69,12 @@ export const cards = [
     description: "Simplify tax planning for your business. Organize finances, identify deductions, create a personalized tax plan. Stay updated on tax laws and maximize savings. Take control of your business's tax strategy with ease"
   },
   {
-    title: 'Fundraising Service',
-    description: "We specialize in helping startups raise money from investors. Our team connects you with potential investors, guides you through the process, and provides personalized support. Let us be your partner in securing the funding"
+    title: 'Advisory Service',
+    description: "We specialize in providing advisory services. Our team connects you with potential financial solutions, guides you through the process, and offers personalized support. Let us be your partner in achieving your financial goals"
   },
   {
     title: 'Personalized Service ',
-    description: "We provide personalized assistance and guidance to startups with their financial challenges. From planning and budgeting to cash flow management and analysis, our experts are here to help you make informed decisions"
+    description: "We offer personalized assistance and guidance to growing businesses facing financial challenges. Our experts can assist you with everything from planning and budgeting to cash flow management and analysis, empowering you to make well-informed decisions"
   },
 ]
 
@@ -107,7 +107,7 @@ export const businesses = [
   {
     title: 'CFO',
     desc: `Fuel your business's financial strategy with our CFO expertise, guiding you towards sustainable growth and profitability`,
-    price: '$2,000',
+    price: '$1,500',
     rate: '/month',
     items: ['Clear explanations and analysis of financial reports', 'Strategic planning and execution', 'Budgeting and forecasting support', 'Risk management and cash flow supervision']
   }

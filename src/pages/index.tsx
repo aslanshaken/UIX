@@ -49,13 +49,12 @@ export default function App() {
           </Typography>
 
           <Typography variant="h5" color="GrayText" align="center" maxWidth={500} margin='auto' my={3}  sx={{ fontSize: { xs: '1rem', sm: '1.5rem' } }}>
-            {"One team for all your accounting needs. "}
-            
+            {"One team for all your accounting needs"}
+            <br></br>
             <Box component="span" sx={{fontWeight: 'bold'}}>
               Full Cycle Bookkeeping, CFO and Tax Planner
             </Box>
-            
-            {" for startups and growing businesses"}
+          
           </Typography>
 
           <Button
@@ -73,7 +72,7 @@ export default function App() {
           </Typography>
           <br/>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' fontWeight={'medium'}>
-            {"We are the fast growing accounting firm in the USA that focuses on startups"}
+            {"We're the top accounting company in the USA, and we specialize in helping businesses grow"}
           </Typography>
 
           <Divider sx={{ my: 2.5 }} />
@@ -88,8 +87,8 @@ export default function App() {
               
               <Typography variant="h5" component="h3" gutterBottom textAlign='justify' color="text.secondary" mt={2} sx={{fontSize: {xs: '1.3rem', sm: '1.5rem'}}}>
                 From small two-founder startups to larger teams, we have worked with 
-                a wide range of businesses. We understand the unique needs of startups
-                and offer tailored solutions to support your success.
+                a wide range of businesses. We understand the specific needs of growing 
+                businesses and provide customized solutions to help you thrive.
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }} flex={1}>
@@ -148,7 +147,6 @@ export default function App() {
           <Typography variant="h6" color="text.secondary" align="center" maxWidth='600px' mt={0.5}>
             Seamlessly integrate with 
             QuickBooks, Stripe, Shopify, Gusto, and more.
-            Perfect for new US startups.
           </Typography>
           <Swiper
             slidesPerView={onlySmallScreen ? 1 : downLgScreen ? 3: 4}
@@ -206,7 +204,7 @@ export default function App() {
 
           <Box flex={1} sx={{pl: {xs: 0, md: 5}}}>
             <Typography variant="h5" component="h3" gutterBottom color={theme.palette.primary.main} fontWeight="bold">
-              {"We deeply care about every startup we work with, providing personalized support for their success"}
+              {"We deeply care about every business we work with, providing personalized support for their success"}
             </Typography>
 
             <Box>
@@ -254,7 +252,7 @@ export default function App() {
 
         <Box mt={20} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant="h5" component="h3" gutterBottom textAlign='center' color={theme.palette.primary.main} textTransform='uppercase'>
-            {"Our startups have achieved top-tier recognition"}
+            {"Our businesses have achieved top-tier recognition"}
           </Typography>
 
           <Box sx={{
