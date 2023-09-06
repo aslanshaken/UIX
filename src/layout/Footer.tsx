@@ -71,11 +71,11 @@ function Footer() {
           {"+1(917) 200-7609"}
         </Typography>
         <Typography variant="body2" color="text.secondary" align="center">
-          {"1 Liberty St #226"}
+          {"6500 River Place Blvd Building 7"}
         </Typography>
 
         <Typography variant="body2" color="text.secondary" align="center">
-          {"New York, NY 10006"}
+          {"Austin, TX 78730"}
         </Typography>
 
         <Box sx={{ display: 'flex', my: 3, mb: 1 }}>
