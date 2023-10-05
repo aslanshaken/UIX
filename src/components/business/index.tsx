@@ -9,7 +9,7 @@ import Slider from '../slider';
 type Props = {
   title: string;
   desc: string;
-  price: any;
+  price: any
   rate: any;
   items: string[];
 }
@@ -22,7 +22,7 @@ export default function Business({ title, desc, price, rate, items }: Props) {
       borderRadius: 5,
       background: 'linear-gradient(180deg, #FFF 25%, #CFD4D4 100%);',
       border: .5,
-      p: 3,
+      p: 2,
       '&:hover': {
         background: 'linear-gradient(180deg, #FFF 0%, #CADCFF 100%);'
       },
@@ -31,7 +31,7 @@ export default function Business({ title, desc, price, rate, items }: Props) {
       }
     }}>
       
-      <Typography variant="h6" component="h3" gutterBottom fontWeight='bold' color={theme.palette.primary.main}>
+      <Typography variant="h6" component="h5" gutterBottom fontWeight='bold' color={theme.palette.primary.main}>
         {title}
       </Typography>
 
@@ -41,16 +41,20 @@ export default function Business({ title, desc, price, rate, items }: Props) {
 
       {
         price && 
-        <Typography variant="h5" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={14}>
+        <Typography variant="h5" color="text.secondary" maxWidth='400px' fontWeight='bold' mt={3} mb={4}>
           {price} 
         <Typography variant='caption'>{rate}</Typography>
         </Typography>
       }
 
       {
-        !price && 
-        <Slider />
+        title === 'Customized Price' 
+        &&
+        <Box marginBottom="85px">
+
+        </Box>
       }
+
 
       <Button
         variant='contained'

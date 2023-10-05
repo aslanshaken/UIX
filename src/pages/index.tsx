@@ -9,7 +9,7 @@ import { useTheme } from 'styled-components';
 import { Divider, Grid, useMediaQuery } from '@mui/material';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 import Comment from '../components/comment';
-import { FAQs, achieved, businesses, cards, comments, fields, partners } from '../utils/constants';
+import { FAQs, achieved, analysis, bookkeping, cards, comments, fields, partners } from '../utils/constants';
 import Card from '../components/card';
 import Partner from '../components/partner/partner';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
@@ -241,9 +241,15 @@ export default function App() {
             {"Explore our straightforward and affordable pricing options designed to suit your business's specific requirements."}
           </Typography>
 
-          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(300px, 1fr))' sx={{display: 'grid', gap: 3, mt: 7}}>
+          <Grid container justifyContent="center"  alignItems="center" margin='45px'  sx={{ height: '100%' }}>
+            <Grid item>
+              <Business {...analysis[0]} />
+            </Grid>
+          </Grid>
+
+          <Grid container gridTemplateColumns='repeat(auto-fill, minmax(270px, 1fr))' sx={{display: 'grid', gap: 3}}>
             {
-              businesses.map((business, index) => (
+              bookkeping.map((business, index) => (
                 <Business {...business} key={index} />
               ))
             }

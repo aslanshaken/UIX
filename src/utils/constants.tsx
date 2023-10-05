@@ -89,25 +89,57 @@ export const fields = [
   'Clean, organized books'
 ]
 
-export const businesses = [
+export const analysis = [
   {
     title: 'Free Analyze',
     desc: 'Unlock business insights with our free analysis, tailored financial solutions',
     price: '$0',
     rate: '',
     items: ['Expert team review of your finances', 'Identification of how our services can benefit you', 'Understanding of your specific needs', 'Customized assistance based on your requirements']
+  }
+]
+
+
+export const bookkeping = [
+  {
+    title: 'Early Start UP',
+    price: '$182',
+        rate: '',
+    desc: '',
+    items: ['Transactions: 50', 'Bank Accounts: 1', 'Financial Reports: P&L, Balance Sheet Statements of Cash Flow', 'Client Portal']
   },
   {
-    title: 'Bookkeeping',
-    desc: 'Take control of your finances with our personalized support and simplified explanations',
-    price: null,
+    title: 'Start UP',
+    price: '$357',
+        rate: '',
+    desc: '',
+    items: ['Transactions: 100', 'Bank Accounts: 2', 'Monthly Video meeting', 'Financial Reports: P&L, Balance Sheet Statements of Cash Flow', 'Client Portal']
+  },
+    {
+    title: 'Small Business',
+    price: '$672',
+        rate: '',
+    desc: '',
+    items: ['Transactions: 300', 'Bank Accounts: 3', 'Monthly Video meeting', 'Financial Reports: P&L, Balance Sheet Statements of Cash Flow', 'Client Portal', 'Financial Key Metrics']
+  },
+  {
+    title: 'Medium Business',
+    price: '$987',
+        rate: '',
+    desc: '',
+    items: ['Transactions: 500', 'Bank Accounts: 4', 'Monthly Video meeting','Financial Reports: P&L, Balance Sheet Statements of Cash Flow', 'Client Portal', 'Financial Key Metrics', 'Financial Analysis']
+  },
+  {
+    title: 'Customized Price',
+    price: '',
     rate: '',
-    items: ['Dedicated finance expert', 'Daily Bookkeeping', 'Financial statements and transaction management', 'Monthly book closure for control and clarity']
+    desc: '',
+    items: ['LARGE BUINESS', 'A/R - INVOICES', 'A/P - BILLS', 'PAYROLL', 'INVENTORY']
   },
   {
-    title: 'CFO',
+    title: 'CFO Services',
     desc: `Fuel your business's financial strategy with our CFO expertise, guiding you towards sustainable growth and profitability`,
-    price: '$1,500',
+    price: '',
     rate: '/month',
     items: ['Clear explanations and analysis of financial reports', 'Strategic planning and execution', 'Budgeting and forecasting support', 'Risk management and cash flow supervision']
   }
